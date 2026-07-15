@@ -1,5 +1,4 @@
 using System;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -32,7 +31,6 @@ public class CameraController : PlayerSystem
     public void GetMouseLookInput(InputAction.CallbackContext context)
     {
         _mouseLook = context.ReadValue<Vector2>();
-        {}
     }
 
     private void HandleCameraMovement()
@@ -43,8 +41,8 @@ public class CameraController : PlayerSystem
         _rotX -= mouseY;
         _rotX = Mathf.Clamp(_rotX, _maxLookDownAngle, _maxLookUpAngle);
 
-        player.Data.playerCamera.transform.rotation = quaternion.Euler(_rotX);
+        player.Data.playerCamera.transform.localRotation = Quaternion.Euler(_rotX, 0f, 0f);
 
-        Debug.Log(mouseY);
+        player.Data.playerBody.transform.Rotate(Vector3.up * mouseX);
     }
 }

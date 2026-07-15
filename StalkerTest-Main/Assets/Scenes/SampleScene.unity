@@ -1021,7 +1021,7 @@ MonoBehaviour:
   _sensitivityX: 5
   _sensitivityY: 5
   _maxLookUpAngle: 90
-  _maxLookDownAngle: 90
+  _maxLookDownAngle: -90
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
