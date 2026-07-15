@@ -2,5 +2,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    PlayerData Data;
+    public PlayerData Data;
+
+    void Start()
+    {
+        Data.playerCamera = Camera.main.transform.gameObject;
+        Data.playerBody = gameObject;
+    }
 }

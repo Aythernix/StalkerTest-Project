@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerSystem : MonoBehaviour
+public abstract class PlayerSystem : MonoBehaviour
 {
-    Player player;
+   protected Player player;
 
     void Awake()
     {

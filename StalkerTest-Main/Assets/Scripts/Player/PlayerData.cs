@@ -5,6 +5,9 @@ public class PlayerData : ScriptableObject
 {
     public PlayerEvents Events;
 
+    public GameObject playerCamera;
+    public GameObject playerBody;
+
     public enum MovementStates
     {
         Walking,
