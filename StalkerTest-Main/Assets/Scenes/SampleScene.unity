@@ -1018,8 +1018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8543d2217b08c594a95104c4c0923d8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sensitivityX: 5
-  _sensitivityY: 5
+  _sensitivityX: 15
+  _sensitivityY: 15
   _maxLookUpAngle: 90
   _maxLookDownAngle: -90
 --- !u!1660057539 &9223372036854775807

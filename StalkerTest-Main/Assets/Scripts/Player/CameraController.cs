@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +22,8 @@ public class CameraController : PlayerSystem
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -39,10 +43,11 @@ public class CameraController : PlayerSystem
         var mouseY = _mouseLook.y * _sensitivityY * Time.deltaTime;
 
         _rotX -= mouseY;
+        Debug.Log($"Rotation X: {_rotX}, mouseY: {mouseY}");
         _rotX = Mathf.Clamp(_rotX, _maxLookDownAngle, _maxLookUpAngle);
 
         player.Data.playerCamera.transform.localRotation = Quaternion.Euler(_rotX, 0f, 0f);
-
         player.Data.playerBody.transform.Rotate(Vector3.up * mouseX);
+    
     }
 }
