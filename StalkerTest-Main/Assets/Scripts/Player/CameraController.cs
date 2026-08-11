@@ -39,8 +39,8 @@ public class CameraController : PlayerSystem
 
     private void HandleCameraMovement()
     {
-        var mouseX = _mouseLook.x * _sensitivityX * Time.deltaTime;
-        var mouseY = _mouseLook.y * _sensitivityY * Time.deltaTime;
+        var mouseX = _mouseLook.x * _sensitivityX;
+        var mouseY = _mouseLook.y * _sensitivityY;
 
         _rotX -= mouseY;
         Debug.Log($"Rotation X: {_rotX}, mouseY: {mouseY}");
