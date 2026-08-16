@@ -43,7 +43,6 @@ public class CameraController : PlayerSystem
         var mouseY = _mouseLook.y * _sensitivityY;
 
         _rotX -= mouseY;
-        Debug.Log($"Rotation X: {_rotX}, mouseY: {mouseY}");
         _rotX = Mathf.Clamp(_rotX, _maxLookDownAngle, _maxLookUpAngle);
 
         player.Data.playerCamera.transform.localRotation = Quaternion.Euler(_rotX, 0f, 0f);
