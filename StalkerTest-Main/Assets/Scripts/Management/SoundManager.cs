@@ -28,7 +28,7 @@ public class SoundManager : MonoBehaviour
     {
         if (_instance != null && _instance != this)
         {
-            Debug.LogWarning("These is already a GameManager in this scene");
+            Debug.LogWarning("These is already a SoundManager in this scene");
             Destroy(this);
         }
         else
@@ -60,8 +60,9 @@ public class SoundManager : MonoBehaviour
 
         SoundData newSoundData = new SoundData
         {
+            soundProfile = sound,
             origin = origin,
-            loudness = sound.BaseLoudness
+            Priority = sound.Priority
         };
 
         OnSoundEmitted?.Invoke(newSoundData);
@@ -72,5 +73,5 @@ public struct SoundData
 {
     public SoundProfile soundProfile;
     public Vector3 origin;
-    public float loudness;
+    public int Priority;
 }

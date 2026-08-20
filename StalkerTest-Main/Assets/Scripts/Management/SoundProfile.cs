@@ -10,7 +10,7 @@ public class SoundProfile : ScriptableObject
     [Range(0,1f)]
     public float Volume = 1f;
 
-    public float BaseLoudness = 10;
+    public int Priority = 10;
 
     public float MaxDistance = 100f;
 

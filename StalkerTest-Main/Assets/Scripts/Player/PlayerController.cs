@@ -42,12 +42,10 @@ public class PlayerController : PlayerSystem
         {
             var input = context.ReadValue<Vector2>();
             _inputDirection = new Vector3(input.x, 0, input.y);
-            Debug.Log(_inputDirection);
         }
         else if (context.canceled)
         {
             _inputDirection = Vector2.zero;
-            Debug.Log(_inputDirection);
         }
     }
 
