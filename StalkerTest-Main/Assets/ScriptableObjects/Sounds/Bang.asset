@@ -15,6 +15,6 @@ MonoBehaviour:
   SoundName: Explosion
   Clips:
   - {fileID: 8300000, guid: a85bbe07baf877f42b20e2decaf9ded1, type: 3}
-  Volume: 0.5
-  Priority: 1
-  MaxDistance: 100
+  Volume: 0.583
+  Priority: 10
+  MaxDistance: 334.3

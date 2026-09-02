@@ -56,13 +56,15 @@ public class SoundManager : MonoBehaviour
 
         source.clip = sound.GetRandomAudioClip;
         source.volume = sound.Volume;
+        source.maxDistance = sound.MaxDistance;
         source.Play();
 
         SoundData newSoundData = new SoundData
         {
             soundProfile = sound,
             origin = origin,
-            Priority = sound.Priority
+            Priority = sound.Priority,
+            MaxDistance = sound.MaxDistance,
         };
 
         OnSoundEmitted?.Invoke(newSoundData);
@@ -74,4 +76,5 @@ public struct SoundData
     public SoundProfile soundProfile;
     public Vector3 origin;
     public int Priority;
+    public float MaxDistance;
 }

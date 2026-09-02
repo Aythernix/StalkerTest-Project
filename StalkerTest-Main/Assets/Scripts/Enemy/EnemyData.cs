@@ -8,7 +8,7 @@ public  class EnemyData : ScriptableObject
     // Such as attack damage, move speed, etc
 
     public float MaxHearingRange;
-    public AnimationCurve HearingFallOff;
+
 }
 
 
